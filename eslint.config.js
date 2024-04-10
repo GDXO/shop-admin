@@ -35,6 +35,7 @@ export default [
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',
+      'vue/multi-word-component-names': 'off',
       // '@typescript-eslint/no-unused-vars': [
       //   'error',
       //   { varsIgnorePattern: '.*', args: 'none' }

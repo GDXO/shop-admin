@@ -2,6 +2,7 @@
   <h1>首页</h1>
   <!-- <p>{{ $store.state.count }}</p> -->
   <p>{{ store.state.count }}</p>
+  <el-button>测试 button</el-button>
 </template>
 
 <script lang='ts' setup>

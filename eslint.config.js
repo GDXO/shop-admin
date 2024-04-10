@@ -36,17 +36,23 @@ export default [
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',
       'vue/multi-word-component-names': 'off',
-      // '@typescript-eslint/no-unused-vars': [
-      //   'error',
-      //   { varsIgnorePattern: '.*', args: 'none' }
-      // ],
-      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/promise-function-async': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
+      camelcase: 'off',
+      '@typescript-eslint/camelcase': 'off',
       'vue/no-unused-vars': [
         'error',
         {
           ignorePattern: '^_'
         }
-      ]
+      ],
+      // '@typescript-eslint/no-unused-vars': [
+      //   'error',
+      //   { varsIgnorePattern: '.*', args: 'none' }
+      // ]
+      '@typescript-eslint/no-unused-vars': 'off'
     }
   }
 ]

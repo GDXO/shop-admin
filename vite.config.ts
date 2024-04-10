@@ -18,8 +18,8 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      styl: {
-        additionalData: `$injectedColor ?= orange`
+      scss: {
+        additionalData: '@import "@/styles/variables.scss";'
       }
     }
   }

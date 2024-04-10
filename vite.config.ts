@@ -15,5 +15,12 @@ export default defineConfig({
     alias: {
       '@': path.join(__dirname, 'src')
     }
+  },
+  css: {
+    preprocessorOptions: {
+      styl: {
+        additionalData: `$injectedColor ?= orange`
+      }
+    }
   }
 })

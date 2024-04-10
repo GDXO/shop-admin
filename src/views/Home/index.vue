@@ -15,4 +15,8 @@ console.log(User)
 console.log(store.state.count)
 </script>
 
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+h1 {
+  color: $color;
+}
+</style>

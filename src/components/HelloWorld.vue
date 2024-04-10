@@ -1,13 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+const title = ref(null)
+
+onMounted(() => {
+  console.log(title.value)
+})
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 ref="title">
+    {{ msg }}
+  </h1>
 
   <div class="card">
     <button

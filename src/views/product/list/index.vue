@@ -1,5 +1,5 @@
 <template>
-  <h1>首页</h1>
+  <h1>list</h1>
 </template>
 
 <script lang='ts' setup></script>

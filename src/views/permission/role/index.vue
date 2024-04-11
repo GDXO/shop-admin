@@ -1,5 +1,5 @@
 <template>
-  <h1>首页</h1>
+  <h1>角色</h1>
 </template>
 
 <script lang='ts' setup></script>

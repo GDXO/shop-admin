@@ -1,7 +1,7 @@
 <template>
   <el-dropdown trigger="click">
     <span class="el-dropdown-link">
-      用户
+      {{ $store.state.userInfo?.account }}
       <el-icon class="el-icon--right">
         <arrow-down />
       </el-icon>

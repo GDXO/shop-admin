@@ -3,9 +3,10 @@
  */
 import request from '@/utils/request'
 
-import type { ILoginInfoRes } from './types/common'
+import type { LoginInfoRes } from './types/common'
 
-export const getLoginInfo = () => request<ILoginInfoRes>({
+// 获取用户信息
+export const getLoginInfo = () => request<LoginInfoRes>({
   method: 'GET',
   url: '/login/info'
 })

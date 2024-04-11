@@ -5,6 +5,6 @@ import 'element-plus/dist/index.css'
 
 export default {
   install (app: App) {
-    app.use(ElementPlus, { size: 'small', zIndex: 2000, locale: zhCn })
+    app.use(ElementPlus, { size: 'default', zIndex: 2000, locale: zhCn })
   }
 }

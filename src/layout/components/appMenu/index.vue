@@ -3,7 +3,7 @@
     active-text-color="#2489F4"
     background-color="#304156"
     class="appMenuBox"
-    default-active="/"
+    :default-active="currentPath"
     text-color="#fff"
     router
     :collapse="isCollapse"
@@ -71,8 +71,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-
-import { useStore } from '@/store/'
+import { useRouter } from 'vue-router'
 import {
   HomeFilled,
   Goods,
@@ -88,8 +87,15 @@ import {
   Paperclip
 } from '@element-plus/icons-vue'
 
+import { useStore } from '@/store/'
+
+/* 菜单折叠 */
 const store = useStore()
 const isCollapse = computed(() => store.state.isCollapse)
+
+/* 默认选中路由 */
+const router = useRouter()
+const currentPath = router.currentRoute.value.path
 </script>
 
 <style lang="scss" scoped>

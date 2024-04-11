@@ -17,8 +17,8 @@
 </template>
 
 <script lang='ts' setup>
-import AppMenu from './components/AppMenu.vue'
-import AppHeader from './components/appHeader.vue'
+import AppMenu from './components/appMenu/index.vue'
+import AppHeader from './components/appHeader/index.vue'
 </script>
 
 <style lang='scss' scoped>

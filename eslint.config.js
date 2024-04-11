@@ -42,12 +42,15 @@ export default [
       '@typescript-eslint/no-floating-promises': 'off',
       camelcase: 'off',
       '@typescript-eslint/camelcase': 'off',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      '@typescript-eslint/prefer-optional-chain': 'off',
       'vue/no-unused-vars': [
         'error',
         {
           ignorePattern: '^_'
         }
       ],
+      'vue/valid-v-for': 'off',
       // '@typescript-eslint/no-unused-vars': [
       //   'error',
       //   { varsIgnorePattern: '.*', args: 'none' }

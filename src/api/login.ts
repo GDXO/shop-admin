@@ -24,3 +24,9 @@ export const login = (data: {
   url: '/login',
   data
 })
+
+// 登出
+export const logout = () => request({
+  method: 'GET',
+  url: '/setting/admin/logout'
+})

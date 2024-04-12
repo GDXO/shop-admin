@@ -4,7 +4,8 @@ const route: RouteRecordRaw = {
   path: 'order',
   component: RouterView,
   meta: {
-    title: '订单'
+    title: '订单',
+    requiresAuth: true
   },
   children: [
     // 订单列表

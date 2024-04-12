@@ -7,7 +7,7 @@ import { USER_INFO } from '@/utils/constants'
 
 const state = {
   isCollapse: false,
-  userInfo: getItem<UserInfo>(USER_INFO)
+  userInfo: getItem<{ token: string } & UserInfo>(USER_INFO)
 }
 
 export type State = typeof state

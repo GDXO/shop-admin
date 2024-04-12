@@ -2,6 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
+import { store } from '@/store/'
 
 import AppLayout from '@/layout/AppLayout.vue'
 import productRoute from './modules/product'
@@ -19,7 +20,8 @@ const routes: RouteRecordRaw[] = [ // 路由规则
         name: 'home',
         component: async () => await import('@/views/Home/index.vue'),
         meta: {
-          title: '首页'
+          title: '首页',
+          requiresAuth: true
         }
       },
       productRoute,
@@ -41,9 +43,20 @@ const router = createRouter({
 })
 
 // 路由全局前置守卫
-router.beforeEach(() => {
+router.beforeEach(to => {
   // 加载进度条
   nprogress.start()
+
+  // 权限验证
+  if (to.meta.requiresAuth && !store.state.userInfo) {
+    return {
+      path: '/login',
+      // 保存所在的位置, 以便登录后再回来
+      query: {
+        redirect: to.fullPath
+      }
+    }
+  }
 })
 
 // 路由全局后置守卫

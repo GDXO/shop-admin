@@ -72,7 +72,7 @@
 import type { TypeElForm, TypeFormItemRule } from '@/types/elementPlus'
 import { reactive, ref, onMounted } from 'vue'
 import { useStore } from '@/store/'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import {
   User,
@@ -84,6 +84,7 @@ import { getCaptcha, login } from '@/api/login'
 
 /* 公共变量 */
 const router = useRouter()
+const route = useRoute()
 const store = useStore()
 
 /* 表单数据 */
@@ -138,14 +139,19 @@ const handleSubmit = async () => {
   })
 
   // 保存用户信息
-  store.dispatch('triggerSetUserInfo', loginData.user_info)
+  store.dispatch('triggerSetUserInfo', {
+    ...loginData.user_info,
+    token: loginData.token
+  })
 
   ElMessage.success('登录成功!')
 
   // 路由跳转
-  router.replace({
-    name: 'home'
-  })
+  let redirect = route.query.redirect
+  if (typeof redirect !== 'string') {
+    redirect = '/'
+  }
+  router.replace(redirect)
 }
 </script>
 

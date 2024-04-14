@@ -144,7 +144,7 @@
       v-model:page="filterForm.page"
       v-model:limit="filterForm.limit"
       :total-count="totalCount"
-      :is-load-data="isLoadData"
+      :is-loading-switch="isLoadData"
       :load-data="loadAdmins"
     />
   </el-card>

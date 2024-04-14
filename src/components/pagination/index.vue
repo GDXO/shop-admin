@@ -6,7 +6,7 @@
     :page-size="props.limit"
     :page-sizes="[10, 20, 30, 50]"
     :total="props.totalCount"
-    :disabled="props.isLoadData"
+    :disabled="props.isLoadingSwitch"
     @size-change="handleSizeChange"
     @current-change="handleCurrentChange"
   />
@@ -19,7 +19,7 @@ interface PropsType {
   page: number
   limit: number
   totalCount: number
-  isLoadData: boolean
+  isLoadingSwitch: boolean
   loadData: () => void
 }
 
@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<PropsType>(), {
   page: 1,
   limit: 10,
   totalCount: 0,
-  isLoadData: false,
+  isLoadingSwitch: false,
   loadData: () => {}
 })
 
